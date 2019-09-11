@@ -1,5 +1,7 @@
 class User < ApplicationRecord
-  devise :database_authenticatable,
-         :jwt_authenticatable,
-         jwt_revocation_strategy: JWTBlacklist
+  devise :database_authenticatable
+         # :jwt_authenticatable,
+         # jwt_revocation_strategy: JWTBlacklist
+
+  has_many :game_statistics
 end
